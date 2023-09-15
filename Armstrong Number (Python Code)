@@ -1,0 +1,22 @@
+num = int(input("Enter a number: "))
+
+def armstrong_checker(n1,n2):
+  if(n1==n2):
+    print("Armstrong Number!")
+  else:
+    print("Not Armstrong.")
+
+def armstrong(num):
+  arm_num = 0
+  # d is no. of digits
+  d = len(str(num))
+  # stores the entered number
+  num_init = num
+  while num!=0:
+    n = num%10
+    # pow() is used for exponentiation
+    arm_num = pow(n,d) + arm_num
+    num = num//10
+  armstrong_checker(num_init,arm_num)
+
+armstrong(num)
