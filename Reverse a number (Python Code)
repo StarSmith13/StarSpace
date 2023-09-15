@@ -1,0 +1,17 @@
+num = int(input("Enter a number: "))
+
+def print_number(num):
+  print("Reversed number:",num)
+
+def reverse_number(num):
+  reverse_num = 0
+  while num!=0:
+    # Acquire the last digit
+    last_digit = num%10
+    # Place the last digit at first
+    reverse_num = reverse_num*10 + last_digit
+    # reduce the number, until it's zero
+    num = num//10
+  print_number(reverse_num)
+
+reverse_number(num)
