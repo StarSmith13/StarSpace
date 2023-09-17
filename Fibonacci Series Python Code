@@ -1,0 +1,17 @@
+limit = int(input("Enter limit:"))
+
+def fibonacci(limit):
+  fib = []
+  if limit==0:
+    return []
+  elif limit==1:
+    return [0]
+  elif limit==2:
+    return [0,1]
+  else:
+    fib = fibonacci(limit-1)
+    fib.append(fib[-1]+fib[-2])
+  return fib
+
+fib = fibonacci(limit)
+print("Fibonacci Series:",fib)
